@@ -12,7 +12,7 @@ import java.awt.Frame;
  */
 public class AWT {
      public static void main(String[] args) {
-       Frame f = new Frame("AWT");
+       Frame f = new Frame("AWT-UAI");
        f.setSize(300, 200);
        f.setVisible(true);
    }
