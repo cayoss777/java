@@ -32,23 +32,18 @@ public class dlgCliente extends javax.swing.JDialog {
         setLocationRelativeTo(null);  // centra en la pantalla
         // Opcional: hacer que no se pueda redimensionar
         setResizable(false);
-
     }
-
     private void verClientes() {
         // Definir las columnas (coinciden con el diseño de tu tabla)
-        String[] columnas = {"ID", "Nombre", "Apellido", "Cédula"};
+        String[] columnas = {"ID", "Nombre", "Apellido"};
         DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-
         Control_Cliente control = new Control_Cliente();
         List<Cliente> clientes = control.obtenerListaClientes();
-
         for (Cliente c : clientes) {
             Object[] fila = {
                 c.getId(),
                 c.getNombre(),
-                c.getApellido(),
-                c.getCedula()
+                c.getApellido()
             };
             modelo.addRow(fila);
         }
@@ -173,19 +168,15 @@ public class dlgCliente extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Seleccione un cliente");
             return;
         }
-        // Obtener datos de la tabla (asumiendo columnas: ID, Nombre, Apellido, Cédula)
+        // Obtener datos de la tabla (asumiendo columnas: ID, Nombre, Apellido)
         int id = (int) tblClientes.getValueAt(fila, 0);
         String nombre = (String) tblClientes.getValueAt(fila, 1);
         String apellido = (String) tblClientes.getValueAt(fila, 2);
-        String cedula = (String) tblClientes.getValueAt(fila, 3);
-
         // Crear objeto Cliente (necesitas la clase Cliente)
         clienteSeleccionado = new Cliente();
         clienteSeleccionado.setId(id);
         clienteSeleccionado.setNombre(nombre);
         clienteSeleccionado.setApellido(apellido);
-        clienteSeleccionado.setCedula(cedula);
-
         // Cerrar diálogo
         dispose();
     }//GEN-LAST:event_btnSeleccionarActionPerformed

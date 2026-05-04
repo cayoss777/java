@@ -62,9 +62,7 @@ public class frmVenta extends javax.swing.JFrame {
         txtCodigoCliente = new javax.swing.JTextField();
         txtNombreCliente = new javax.swing.JTextField();
         txtApellidoCliente = new javax.swing.JTextField();
-        txtCedulaCliente = new javax.swing.JTextField();
         btnClientes = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -96,8 +94,6 @@ public class frmVenta extends javax.swing.JFrame {
         btnClientes.setText("Ver Clientes");
         btnClientes.addActionListener(this::btnClientesActionPerformed);
 
-        jLabel1.setText("Cédula");
-
         jLabel2.setText("Apellidos");
 
         jLabel3.setText("Nombres");
@@ -127,11 +123,7 @@ public class frmVenta extends javax.swing.JFrame {
                         .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtApellidoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(43, 43, 43))
+                        .addGap(86, 399, Short.MAX_VALUE))
                     .addGroup(pnlClientesLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -147,13 +139,11 @@ public class frmVenta extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtApellidoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCodigoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -322,9 +312,7 @@ public class frmVenta extends javax.swing.JFrame {
             txtCodigoCliente.setText(String.valueOf(cliente.getId()));
             txtNombreCliente.setText(cliente.getNombre());
             txtApellidoCliente.setText(cliente.getApellido());
-            txtCedulaCliente.setText(cliente.getCedula());
         }
-
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnLlamarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLlamarProductoActionPerformed
@@ -377,7 +365,6 @@ public class frmVenta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnLlamarProducto;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -394,7 +381,6 @@ public class frmVenta extends javax.swing.JFrame {
     private javax.swing.JLabel lblNombreVendedor;
     private javax.swing.JPanel pnlClientes;
     private javax.swing.JTextField txtApellidoCliente;
-    private javax.swing.JTextField txtCedulaCliente;
     private javax.swing.JTextField txtCodigoCliente;
     private javax.swing.JTextField txtCodigoVendedor;
     private javax.swing.JTextField txtIdProducto;

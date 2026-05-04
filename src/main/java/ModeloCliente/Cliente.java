@@ -13,17 +13,14 @@ public class Cliente {
     private int id;
     private String nombre;
     private String apellido;
-    private String cedula;
-    
-    //Contructor vacío
+
     public Cliente() {
     }
-    
-    public Cliente(int id, String nombre, String apellido, String cedula) {
+
+    public Cliente(int id, String nombre, String apellido) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.cedula = cedula;
     }
 
     public int getId() {
@@ -49,15 +46,9 @@ public class Cliente {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+ 
+    
 
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-   
     
     
     
