@@ -29,6 +29,10 @@ public class dlgCliente extends javax.swing.JDialog {
         //Cargar datos de la base de datos
         verClientes();
 
+        setLocationRelativeTo(null);  // centra en la pantalla
+        // Opcional: hacer que no se pueda redimensionar
+        setResizable(false);
+
     }
 
     private void verClientes() {
@@ -222,6 +226,7 @@ public class dlgCliente extends javax.swing.JDialog {
             }
         });
     }
+
     // Método para obtener el cliente después de cerrar el diálogo
     public Cliente getClienteSeleccionado() {
         return clienteSeleccionado;

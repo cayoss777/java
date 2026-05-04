@@ -6,10 +6,8 @@ package VistaVendedor;
 
 import ControlVendedor.Control_Vendedor;
 import ModeloVendedor.Vendedor;
-import VistaCliente.frmPrincipal;
+
 import VistaCliente.frmVenta;
-
-
 
 import javax.swing.JOptionPane;
 
@@ -26,6 +24,11 @@ public class frmLoginGUI extends javax.swing.JFrame {
      */
     public frmLoginGUI() {
         initComponents();
+        txtNombreVendedor.requestFocus();
+
+        setLocationRelativeTo(null);  // centra en la pantalla
+        // Opcional: hacer que no se pueda redimensionar
+        setResizable(false);
     }
 
     /**
@@ -121,7 +124,7 @@ public class frmLoginGUI extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-              String usuario = txtNombreVendedor.getText();
+        String usuario = txtNombreVendedor.getText();
         String password = new String(txtPasswordVendedor.getPassword());
 
         Control_Vendedor control = new Control_Vendedor();
@@ -130,7 +133,9 @@ public class frmLoginGUI extends javax.swing.JFrame {
         if (vendedor != null) {
             JOptionPane.showMessageDialog(this, "Bienvenido " + vendedor.getNombre());
             // Abrir la ventana principal de ventas
-            frmVenta inicioVenta = new frmVenta();
+            //frmVenta inicioVenta = new frmVenta();
+
+            frmVenta inicioVenta = new frmVenta(vendedor);
             inicioVenta.setVisible(true);
             this.dispose(); // cerrar login
         } else {
@@ -140,9 +145,8 @@ public class frmLoginGUI extends javax.swing.JFrame {
             txtPasswordVendedor.setText("");
             txtNombreVendedor.requestFocus();
         }
-  
-            
-     
+
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

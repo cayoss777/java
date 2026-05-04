@@ -16,8 +16,8 @@ public class ConexionMySql {
     //private static final String URL = "jdbc:mysql://localhost:3306/bd_dos";
     //Agregar parámetros a la URL (evita advertencias de zona horaria y SSL) d 
     private static final String URL = "jdbc:mysql://localhost:3306/bd_dos?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "Claudios";
-    private static final String PASS = "Claudios";
+    private static final String USER = "root";
+    private static final String PASS = "";
 
     // Bloque estático para registrar el driver (opcional en Java 8+)
     static {

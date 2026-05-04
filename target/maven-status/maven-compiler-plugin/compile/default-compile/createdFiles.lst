@@ -1,7 +1,11 @@
 VistaCliente\dlgCliente$1$1.class
 com\mycompany\uai2026\Uai2026.class
+ControlProducto\Control_Producto.class
+VistaProducto\dlgProducto$1$1.class
 ControladorClientes\Control_Cliente.class
+VistaProducto\dlgProducto$1.class
 ModeloVendedor\Vendedor.class
+VistaProducto\dlgProducto.class
 VistaCliente\dlgCliente.class
 VistaCliente\frmPrincipal.class
 VistaVendedor\frmLoginGUI.class
@@ -12,3 +16,4 @@ MySql\ConexionMySql.class
 com\mycompany\uai2026\PruebaDriver.class
 VistaCliente\dlgCliente$1.class
 VistaCliente\frmVenta.class
+ModeloProducto\Producto.class
